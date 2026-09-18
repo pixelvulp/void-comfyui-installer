@@ -47,7 +47,6 @@ LOG_FILE="/tmp/comfyui_install.log"
 > "$LOG_FILE"
 
 # 4. Installation Process
-(
     echo "10"
     echo "# Cloning ComfyUI repository..."
     git clone https://github.com/comfyanonymous/ComfyUI.git "$INSTALL_DIR/ComfyUI" >> "$LOG_FILE" 2>&1 || exit 1
