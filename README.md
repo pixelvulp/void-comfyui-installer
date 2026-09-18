@@ -18,7 +18,7 @@
 ## Usage
 
 ```bash
-https://github.com/queenoffiends/comfyui-arch-installer.git
+https://github.com/pixelvulp/void-comfyui-installer.git
 cd /path/to/install/dir/ComfyUI/
 chmod +x install_comfyui.sh
 ./install_comfyui.sh
