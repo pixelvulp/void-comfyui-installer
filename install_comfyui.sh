@@ -23,7 +23,7 @@ done
 if [ -n "$MISSING_PKGS" ]; then
     echo "Missing dependencies detected:$MISSING_PKGS"
     echo "Requesting privileges to install them via xbps..."
-    doas xdps-install --noconfirm $MISSING_PKGS || {
+    doas xbps-install --noconfirm $MISSING_PKGS || {
         echo "Failed to install dependencies. Exiting."
         exit 1
     }
@@ -35,8 +35,8 @@ INSTALL_DIR=$(zenity --file-selection --directory --title="Choose Installation D
 if [ -z "$INSTALL_DIR" ]; then exit 0; fi
 
 # 3. GPU Configuration
-GPU_TYPE=$(zenity --list --title="Select GPU Type" --text="Which GPU do you have?" \ 2>/dev/null
-    dialog --column="Select" --column="GPU" \
+GPU_TYPE=$(zenity --list --title="Select GPU Type" --text="Which GPU do you have?" \
+    --radiolist --column="Select" --column="GPU" \
     TRUE "NVIDIA" \
     FALSE "AMD" \
     FALSE "CPU Only" \
@@ -64,7 +64,7 @@ LOG_FILE="/tmp/comfyui_install.log"
 
     echo "40"
     echo "# Activating virtual environment..."
-    source venv/bin/activate.fish || exit 1
+    source venv/bin/activate || exit 1
 
     echo "50"
     echo "# Installing PyTorch for $GPU_TYPE (This will take a while)..."
