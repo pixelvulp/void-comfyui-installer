@@ -18,7 +18,7 @@
 ## Usage
 
 ```bash
-https://github.com/pixelvulp/void-comfyui-installer.git
+git clone https://github.com/pixelvulp/void-comfyui-installer.git
 cd /path/to/install/dir/ComfyUI/
 chmod +x install_comfyui.sh
 ./install_comfyui.sh
