@@ -2,7 +2,7 @@
 
 ## What it does
 
-1. **Checks dependencies** — verifies `zenity`, `git`, and `python` are installed, and offers to install any missing ones via `pacman` (requires `sudo`).
+1. **Checks dependencies** — verifies `zenity`, `git`, and `python` are installed, and offers to install any missing ones via `xbps` (requires `doas`).
 2. **Prompts for an install directory** via a native file picker.
 3. **Prompts for your GPU type** — NVIDIA, AMD, or CPU-only — and installs the matching PyTorch build.
 4. **Clones ComfyUI**, creates a Python virtual environment, installs PyTorch and ComfyUI's dependencies, all with a live progress bar.
