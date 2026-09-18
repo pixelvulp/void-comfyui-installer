@@ -36,7 +36,7 @@ if [ -z "$INSTALL_DIR" ]; then exit 0; fi
 
 # 3. GPU Configuration
 GPU_TYPE=$(zenity --list --title="Select GPU Type" --text="Which GPU do you have?" \ 2>/dev/null
-    --radiolist --column="Select" --column="GPU" \
+    dialog --column="Select" --column="GPU" \
     TRUE "NVIDIA" \
     FALSE "AMD" \
     FALSE "CPU Only" \
