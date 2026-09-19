@@ -1,4 +1,4 @@
-# ComfyUI GUI Installer for Void Linux (Fish Shell Edition)
+# ComfyUI GUI Installer for Void Linux
 
 ## What it does
 
