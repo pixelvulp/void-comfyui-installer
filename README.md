@@ -19,7 +19,7 @@
 
 ```bash
 git clone https://github.com/pixelvulp/void-comfyui-installer.git
-cd /path/to/install/dir/ComfyUI/
+cd /path/ComfyUI/
 chmod +x install_comfyui.sh
 ./install_comfyui.sh
 ```
@@ -27,7 +27,7 @@ chmod +x install_comfyui.sh
 Follow the dialogs: pick an install directory, pick your GPU type, and let it run. Once finished, start ComfyUI with:
 
 ```fish
-/path/to/install/dir/ComfyUI/run_comfyui.fish
+/path/ComfyUI/run_comfyui.fish
 ```
 
 ## Known issues & troubleshooting
@@ -49,12 +49,7 @@ The default installer runs `pip install torch torchvision torchaudio`, which cur
 Your installed torch==X.Y.Z+cu130 does not include kernels for this GPU.
 ```
 
-Reinstall PyTorch against an older CUDA build that still supports your card, e.g.:
-
-```fish
-source venv/bin/activate.fish
-pip install torch==2.14.0 --index-url https://download.pytorch.org/whl/cu126
-```
+Reinstall PyTorch against an older CUDA build that still supports your card
 
 (Check [pytorch.org/get-started/locally](https://pytorch.org/get-started/locally/) for the CUDA build matching your specific GPU generation.)
 
