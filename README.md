@@ -3,16 +3,16 @@
 ## What it does
 
 1. **Checks dependencies** — verifies `zenity`, `git`, and `python` are installed, and offers to install any missing ones via `xbps` (requires `doas`).
-2. **Prompts for an install directory** via a native file picker.
+2. **Prompts for an install directory**.
 3. **Prompts for your GPU type** — NVIDIA, AMD, or CPU-only — and installs the matching PyTorch build.
-4. **Clones ComfyUI**, creates a Python virtual environment, installs PyTorch and ComfyUI's dependencies, all with a live progress bar.
+4. **Clones ComfyUI**, creates a Python virtual environment, installs PyTorch and ComfyUI's dependencies.
 5. **Generates a Fish launcher** (`run_comfyui.fish`) in the install directory so you can start ComfyUI with a single command afterward.
 6. **Reports success or failure** in a dialog, with a log file at `/tmp/comfyui_install.log` for troubleshooting.
 
 ## Requirements
 
-- Void Linux (or an Void-based distro with `xbps`)
-- [Fish shell](https://fishshell.com/) (only needed to *run* ComfyUI afterward — the installer itself is `bash`)
+- Void Linux (or a Void-based distro with `xbps`)
+- [Fish shell](https://fishshell.com/)
 - `doas` access, if `zenity`, `git`, or `python` aren't already installed
 
 ## Usage
